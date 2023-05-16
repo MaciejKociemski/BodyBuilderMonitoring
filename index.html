@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aplikacja do wprowadzania danych</title>
+    <div class="headerContainer"><button type="button" id="przycisk-przeladuj" onclick="przeladujStrone()">Przeładuj
+            stronę</button><button type="button" id="resetuj-dane">Resetuj dane</button></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Aplikacja do wprowadzania danych</h1>
+
+    <form class="form">
+        <div class="formRow">
+            <label class="formLabel" for="data">Data:</label>
+            <input class="formLabel--input" type="date" id="data" required />
+        </div>
+
+        <div class="formRow">
+            <label class="formLabel" for="masa">Masa:</label>
+            <input class="formLabel--input" type="number" placeholder="wprowadź aktualną wagę ciała (bez 'kg')"
+                id="masa" required />
+        </div>
+
+        <div class="formRow">
+            <label class="formLabel" for="tluszcz">Tłuszcz:</label>
+            <input class="formLabel--input" type="number" placeholder="wprowadź % tłuszczu z badania " id="tluszcz"
+                required />
+        </div>
+
+        <div class="formRow">
+            <label class="formLabel" for="masa-miesni">Masa mięśni:</label>
+            <input class="formLabel--input" type="number" placeholder="wprowadź masę mięsniową z badania (bez 'kg')"
+                id="masa-miesni" required />
+        </div>
+
+        <div class="formRow">
+            <label class="formLabel" for="tbw">TBW:</label>
+            <input class="formLabel--input" type="number" placeholder="wprowadź Total Body Water z badania (bez '%'')"
+                id="tbw" required />
+        </div>
+
+        <div class="formRow">
+            <label class="formLabel" for="bmi">BMI:</label>
+            <input class="formLabel--input" type="number" placeholder="wprowadz BMI / masa ciała/(wzrost^2) " id="bmi"
+                required />
+        </div>
+
+        <button type="button" id="przycisk-dodaj">Dodaj do tabeli</button>
+    </form>
+
+
+
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Masa</th>
+                <th>Tłuszcz</th>
+                <th>Masa mięśni</th>
+                <th>TBW</th>
+                <th>BMI</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button type="button" id="generuj-tabele">Pobierz tabelę w csv</button>
+
+    <canvas id="wykres" width="400" height="200"></canvas>
+    <select id="kategoria">
+        <option value="masa">Masa</option>
+        <option value="tluszcz">Tłuszcz</option>
+        <option value="masaMiesni">Masa mięśni</option>
+        <option value="tbw">TBW</option>
+        <option value="bmi">BMI</option>
+    </select>
+
+
+
+    <script src="./BodyBuildingMonitoring.js"></script>
+    <!-- <script src="./index.js"></script> -->
+</body>
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2023 digiorder. Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+</html>
