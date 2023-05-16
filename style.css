@@ -15,8 +15,8 @@
   margin-right: 10px;
   margin-left: 400px;
   opacity: 1.2;
-  overflow: hidden; /* Dodajemy overflow: hidden, aby zapobiec "wyciekowi" animacji */
-}
+  opacity: 0.8;
+  }
 
 .image-container img {
   width: 100%;
@@ -26,10 +26,16 @@
   transform: scale(1); /* Ustawiamy domyślne powiększenie na 1 */
   transition: transform 0.3s ease; /* Dodajemy animację transformacji */
   border-radius: 50px;
+  
 }
+
+
+
 
 .image-container img:hover {
   transform: scale(1.2);
+  border-radius: 50px;
+  
  
   
    /* Po najechaniu kursorem powiększamy obrazek do 1.2-krotności */
