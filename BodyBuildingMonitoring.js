@@ -111,7 +111,7 @@ function generujWykresLiniowy(kategoria) {
   const ctx = document.getElementById("wykres").getContext("2d");
 
   new Chart(ctx, {
-    type: "line",
+    type: "bar",
     data: {
       labels: etykiety,
       datasets: [
