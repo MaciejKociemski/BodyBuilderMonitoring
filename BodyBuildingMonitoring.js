@@ -3,6 +3,8 @@ function przeladujStrone() {
   location.reload();
 }
 
+
+
 function dodajDane() {
   const data = document.getElementById("data").value;
   const masa = document.getElementById("masa").value;
