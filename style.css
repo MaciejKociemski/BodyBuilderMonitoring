@@ -37,8 +37,6 @@
   border-radius: 50px;
   
  
-  
-   /* Po najechaniu kursorem powiększamy obrazek do 1.2-krotności */
 }
 
   .form {
@@ -54,6 +52,7 @@
     color: darkblue;
     font-size: 14px;
     border-collapse: collapse;
+    
   }
 
   #wykres {
@@ -78,10 +77,10 @@ h3 {
 }
 th,
 td {
-  border: 1px solid rgb(169, 163, 233);
+  border: 1px solid gray;
   padding: 5px;
   text-align: left;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 th {
